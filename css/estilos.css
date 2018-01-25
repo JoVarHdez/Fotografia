@@ -1,0 +1,265 @@
+body {
+  background-color: #02010A;
+  font-family: 'Dancing Script';
+}
+
+#contenido {
+  display: flex;
+  flex-flow: row wrap;
+  background-color: #82C3A6;
+  border-radius: 10px 10px 0px 0px;
+  width: 100%;
+  margin: auto;
+  animation: rebote 1s;
+  align-items: center;
+}
+
+/*Encabezado*/
+
+header {
+  background-color: #5B7989;
+  width: 100%;
+  padding: 20px;
+  border-radius: 10px 10px 0px 0px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  color: #FFF;
+  justify-content: space-around;
+  align-items: center;
+}
+
+h1 {
+  text-shadow: 2px 2px #02010A;
+  font-size: 2em;
+}
+
+nav {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+#menu {
+	width: 100%;
+}
+
+#titulo nav a:link, #titulo nav a:active {
+  display: inline-block;
+  height: 30px;
+	padding: 5px 1.5em;
+	text-decoration: underline;
+}
+
+#titulo nav a:hover, #titulo nav a:active {
+		border-radius: 15px 10px;
+		background: #6C8A9A;
+	}
+
+#titulo nav .activo, #titulo nav .activo {
+		text-decoration: none !important;
+		background: #6C8A9A;
+		color: #FFF;
+	}
+
+/*Index*/
+
+section img {
+  box-shadow: 2px 2px 2px #02010A;
+}
+
+#imagenCentral {
+  background-color: #82C3A6;
+  width: 100%;
+}
+
+#imagenPaisaje {
+  padding: 10px;
+  width: 80%;
+  margin: auto;
+}
+
+#imagenPaisaje img{
+  width: 100%;
+}
+
+#imagenSecundaria {
+  background-color: #D5C75F;
+  border-width: 1px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+figure [id*="imagenRet"] {
+  width: 30%;
+  margin: auto;
+  padding: 10px;
+}
+
+#imagenRet1 img{
+  width: 100%;
+  box-shadow: 2px 2px 2px #02010A;
+  width: 150px;
+  -moz-transition: transform 0.5s;
+  transition: transform 0.5s;
+}
+
+#imagenRet1 img:hover {
+  box-shadow: 2px 2px 2px #82C3A6;
+  border-width: 2px;
+  -ms-transform: rotate(10deg);
+	-webkit-transform: rotate(10deg);
+	-moz-transform: rotate(10deg);
+	transform: rotate(10deg);
+}
+
+#imagenRet2 img {
+  width: 100%;
+  box-shadow: 2px 2px 2px #02010A;
+  width: 150px;;
+  -moz-transition: transform 0.5s;
+  transition: transform 0.5s;
+}
+
+#imagenRet2 img:hover {
+  box-shadow: 2px 2px 2px #82C3A6;
+  border-width: 2px;
+  -ms-transform: translate(20px, -5px);
+	-webkit-transform: translate(20px, -5px);
+	-moz-transform: translate(20px, -5px);
+	transform: translate(20px, -5px);
+}
+
+figcaption {
+  text-align: center;
+}
+
+/*Paisaje y Retrato*/
+.galeria {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #D5C75F;
+  justify-content: center;
+  border: 1px;
+}
+
+.galeria figure {
+  width: 80%;
+  margin: auto;
+  padding: 10px;
+}
+
+figure img {
+  width: 100%;
+  transition: transform 0.5s;
+}
+
+.galeria figure:nth-child(even) {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);;
+}
+
+#imagen1 {
+  -webkit-filter: blur(10px);
+  filter: blur(10px);
+}
+
+#imagen3 {
+  -webkit-filter: sepia(90%);
+  filter: sepia(90%);
+}
+
+/*Pie de página*/
+
+footer {
+  clear: both;
+  width: 100%;
+  border-radius: 0px 0px 10px 10px;
+  background-color: #C6D5C5;
+  padding: 40px;
+  display: list-item;
+}
+
+.columnas {
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.logo {
+  width: 30px;
+}
+
+div [id*="columna"] {
+  flex-grow: 1;
+  flex-basis: 100%;
+  padding: 10px;
+}
+
+h4 {
+  margin: 5px 0;
+  font-size: 2.3em;
+}
+
+footer div p {
+  margin: 0;
+}
+
+/*Computadora*/
+
+@media all and (min-width:900px) {
+
+  #contenido{
+    width: 900px;
+  }
+
+  h1 {
+  	text-align: left;
+  }
+
+  #menu {
+  	width: 40%;
+  }
+
+  figure [id*="imagenRet"] {
+    width: 40%;
+  }
+
+  .galeria figure {
+    width: 30%;
+  }
+
+  div [id*="columna"] {
+	   flex-basis: 20%;
+  }
+}
+
+/*Animación*/
+
+@-webkit-keyframes rebote{
+  0%{
+    margin-top: 150%;
+  }
+  60%{
+    margin-top: -5%;
+  }
+  100%{
+    margin-top: 0%;
+  }
+}
+
+@keyframes rebote {
+  0%{
+    margin-top: 150%;
+  }
+  60%{
+    margin-top: -5%;
+  }
+  100%{
+    margin-top: 0%;
+  }
+}
